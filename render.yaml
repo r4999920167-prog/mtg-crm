@@ -1,9 +1,9 @@
 services:
   - type: web
     name: mtg-crm
-    runtime: node
-    buildCommand: npm install && npm run build
-    startCommand: NODE_ENV=production node dist/index.cjs
+    env: node
+    buildCommand: "npm install && npm run build"
+    startCommand: "NODE_ENV=production node dist/index.cjs"
     plan: free
     envVars:
       - key: NODE_ENV
